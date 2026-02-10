@@ -6,25 +6,22 @@ export const site = {
   openingNote: "Apertura en junio",
   bookingNote: "Reservas pronto",
 
-  // Branding / imágenes
-  logoPath: "/images/logo-radio-barber.jpg",
-  heroImagePath: "/images/hero.jpg",
+  // Importante: sin "/" adelante (para que funcione con BASE_URL)
+  logoPath: "images/logo-radio-barber.jpg",
+  heroImagePath: "images/hero.png",
 
-  // Galería (reemplazá estas imágenes por las del anuncio, manteniendo nombres)
+  // Usar las imágenes que ya están en public/images
   gallery: [
-    { src: "/images/gallery/01.jpg", alt: "Corte clásico (foto del anuncio)" },
-    { src: "/images/gallery/02.jpg", alt: "Degradé prolijo (foto del anuncio)" },
-    { src: "/images/gallery/03.jpg", alt: "Detalle tijera y peine (foto del anuncio)" },
-    { src: "/images/gallery/04.jpg", alt: "Ambiente barbería (foto del anuncio)" },
-    { src: "/images/gallery/05.jpg", alt: "Terminación y contornos (foto del anuncio)" },
-    { src: "/images/gallery/06.jpg", alt: "Estilo clásico moderno (foto del anuncio)" }
+    { src: "images/g1.jpg", alt: "Corte clásico (foto del anuncio)" },
+    { src: "images/g2.jpg", alt: "Degradé prolijo (foto del anuncio)" },
+    { src: "images/g3.jpg", alt: "Detalle tijera y peine (foto del anuncio)" },
+    { src: "images/g4.jpg", alt: "Ambiente barbería (foto del anuncio)" },
+    { src: "images/g5.jpg", alt: "Terminación y contornos (foto del anuncio)" },
+    { src: "images/g6.jpg", alt: "Estilo clásico moderno (foto del anuncio)" }
   ],
 
-  // Reemplazar por el número real en formato internacional SIN "+"
-  // Ejemplo Uruguay: 5989XXXXXXX
-  whatsappNumber: "598092360039",
+  whatsappNumber: "59892360039",
 
-  // Placeholders
   instagramHandle: "@radiobarber.mercedes",
   facebookHandle: "Radio Barber"
 };
@@ -39,3 +36,4 @@ export function mapsLink() {
   const q = encodeURIComponent(`${site.addressLine}, ${site.city}`);
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
+
