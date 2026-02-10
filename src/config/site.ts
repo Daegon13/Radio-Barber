@@ -22,7 +22,7 @@ export const site = {
 
   // Reemplazar por el número real en formato internacional SIN "+"
   // Ejemplo Uruguay: 5989XXXXXXX
-  whatsappNumber: "598XXXXXXXX",
+  whatsappNumber: "598092360039",
 
   // Placeholders
   instagramHandle: "@radiobarber.mercedes",
