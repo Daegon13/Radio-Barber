@@ -1,0 +1,17 @@
+---
+import { site, waLink } from "../config/site";
+
+// Mensaje optimizado (conversión): directo, sin vueltas, y menciona apertura + intención
+const waHref = waLink(`Hola! Quiero reservar para la apertura de ${site.shortName} en junio. ¿Qué disponibilidad tienen?`);
+---
+<div class="sticky-cta">
+  <div class="wrap">
+    <div class="mini">
+      <strong style="color:var(--text)">{site.shortName}</strong><br/>
+      {site.openingNote} • {site.addressLine}
+    </div>
+    <a class="btn btn-primary" href={waHref} target="_blank" rel="noreferrer" style="width: 100%;">
+      Reservar por WhatsApp
+    </a>
+  </div>
+</div>

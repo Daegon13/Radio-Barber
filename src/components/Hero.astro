@@ -1,0 +1,81 @@
+---
+import { site, waLink, mapsLink } from "../config/site";
+
+const waMsg = `Hola! Quiero reservar para ${site.shortName}. Apertura en junio. ¿Me pasás disponibilidad?`;
+const waHref = waLink(waMsg);
+const mapHref = mapsLink();
+---
+<section class="section" style="padding-top: 26px;">
+  <div class="container">
+    <div class="card reveal" style="overflow:hidden;">
+      <div style="display:grid; gap: 18px; padding: 20px;">
+        <div class="kicker">Barbería clásica • tijera y peine</div>
+
+        <div style="display:flex; align-items:center; gap: 14px;">
+          <div
+            class="card"
+            style="width: 68px; height: 68px; border-radius: 999px; overflow:hidden; box-shadow:none; background: rgba(255,255,255,.02);"
+          >
+            <img
+              src={site.logoPath}
+              alt={"Logo " + site.shortName}
+              loading="eager"
+              decoding="async"
+              style="width:100%; height:100%; object-fit: cover;"
+            />
+          </div>
+
+          <h1 class="h1" style="font-size: clamp(34px, 6vw, 56px); margin: 0;">
+            {site.shortName}
+          </h1>
+        </div>
+
+        <p style="font-size: 16px; max-width: 62ch;">
+          Barbería clásica en Mercedes. Corte a tijera con detalle, estilo de confianza y terminaciones prolijas.
+          Degradés modernos cuando el look lo pide.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; gap: 10px; align-items:center;">
+          <a class="btn btn-primary" href={waHref} target="_blank" rel="noreferrer">
+            <span aria-hidden="true">✂</span>
+            Reservar por WhatsApp
+          </a>
+          <a class="btn" href="#servicios">Ver servicios</a>
+          <a class="btn" href={mapHref} target="_blank" rel="noreferrer">Cómo llegar</a>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap: 12px; align-items:center; color: var(--muted); font-size: 14px;">
+          <div style="display:flex; gap: 8px; align-items:center;">
+            <span aria-hidden="true">📍</span>
+            <strong style="color:var(--text)">{site.city}</strong> • {site.addressLine}
+          </div>
+          <div style="display:flex; gap: 8px; align-items:center;">
+            <span aria-hidden="true">🗓</span>
+            <strong style="color:var(--text)">{site.openingNote}</strong> — {site.bookingNote}
+          </div>
+        </div>
+
+        <div class="grid cols-3" style="margin-top: 6px;">
+          <div class="card" style="padding: 14px; box-shadow:none;">
+            <div style="font-weight:800;">Detalle</div>
+            <p style="margin:6px 0 0;">Prolijidad y terminación cuidada.</p>
+          </div>
+          <div class="card" style="padding: 14px; box-shadow:none;">
+            <div style="font-weight:800;">Clásico</div>
+            <p style="margin:6px 0 0;">Tijera y peine, como antes.</p>
+          </div>
+          <div class="card" style="padding: 14px; box-shadow:none;">
+            <div style="font-weight:800;">Simple</div>
+            <p style="margin:6px 0 0;">Reservás directo por WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--line);">
+        <img src={site.heroImagePath} alt="Barbería clásica con luz cálida y herramientas (imagen principal)"
+             loading="eager" decoding="async"
+             style="width:100%; height: 240px; object-fit: cover;" />
+      </div>
+    </div>
+  </div>
+</section>

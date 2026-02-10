@@ -1,0 +1,29 @@
+---
+import { site, mapsLink } from "../config/site";
+const mapHref = mapsLink();
+const q = encodeURIComponent(`${site.addressLine}, ${site.city}`);
+const iframeSrc = `https://www.google.com/maps?q=${q}&output=embed`;
+---
+<section id="ubicacion" class="section">
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="reveal">
+        <div class="kicker">Ubicación</div>
+        <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Dónde estamos</h2>
+        <p><strong style="color:var(--text)">{site.addressLine}</strong> — {site.city}</p>
+        <a class="btn btn-primary" href={mapHref} target="_blank" rel="noreferrer">Cómo llegar</a>
+        <p style="margin-top: 12px;">Si venís con tiempo, mejor: te atendemos con calma y detalle.</p>
+      </div>
+
+      <div class="card reveal" style="overflow:hidden;">
+        <iframe
+          title="Mapa"
+          src={iframeSrc}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          style="width:100%; height: 320px; border:0;"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+const reviews = [
+  { name: "Martín", text: "Se nota la mano de tijera. Prolijo, sin apuro y con detalle." },
+  { name: "Nico", text: "El degradé quedó parejo y la terminación impecable. Volvería." },
+  { name: "Juan", text: "Clásico de verdad. Te escucha y te deja el corte como tiene que ser." }
+];
+---
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">Confianza</div>
+      <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Reseñas</h2>
+      <p>Opiniones cortas, pero que dicen lo importante: detalle, prolijidad y buen trato.</p>
+    </div>
+
+    <div class="grid cols-3" style="margin-top: 16px;">
+      {reviews.map((r) => (
+        <article class="card reveal" style="padding: 16px;">
+          <p style="margin:0 0 10px;">“{r.text}”</p>
+          <div style="font-weight:800;">— {r.name}</div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

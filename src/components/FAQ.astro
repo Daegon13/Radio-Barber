@@ -1,0 +1,42 @@
+---
+const faqs = [
+  {
+    q: "¿Trabajás con cita?",
+    a: "Sí. Para atenderte bien y sin apuro, lo ideal es reservar por WhatsApp."
+  },
+  {
+    q: "¿Tijera o máquina?",
+    a: "Priorizamos la tijera para el estilo clásico y usamos máquina cuando el look lo pide (por ejemplo, degradés)."
+  },
+  {
+    q: "¿Cómo reservo?",
+    a: "Tocás “Reservar por WhatsApp”, nos decís qué querés hacer y coordinamos horario."
+  },
+  {
+    q: "¿Cuánto dura un turno?",
+    a: "Depende del servicio. Te lo confirmamos por WhatsApp según tu corte."
+  },
+  {
+    q: "¿Medios de pago?",
+    a: "A confirmar. Consultanos por WhatsApp y te decimos lo más cómodo."
+  }
+];
+---
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">FAQ</div>
+      <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Preguntas frecuentes</h2>
+      <p>Lo básico, claro y simple.</p>
+    </div>
+
+    <div class="grid cols-2" style="margin-top: 16px;">
+      {faqs.map((f) => (
+        <details class="reveal">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

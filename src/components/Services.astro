@@ -1,0 +1,50 @@
+---
+const services = [
+  {
+    title: "Corte clásico a tijera",
+    desc: "Forma, prolijidad y un acabado bien artesanal. Ideal si te gusta el estilo de barbero de antes."
+  },
+  {
+    title: "Degradé a máquina",
+    desc: "Fade limpio, transición pareja y terminación precisa. Clásico o moderno, según tu look."
+  },
+  {
+    title: "Corte + perfilado",
+    desc: "Para dejar todo alineado: corte y detalles de contorno bien marcados, sin exagerar."
+  },
+  {
+    title: "Perfilado / barba clásica",
+    desc: "Orden, simetría y terminación prolija. Ideal para mantener la cara siempre cuidada."
+  },
+  {
+    title: "Estilo a medida",
+    desc: "Traé una referencia o contame tu idea y lo adaptamos a tu cara y tu pelo."
+  }
+];
+---
+<section id="servicios" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">Servicios</div>
+      <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Lo esencial, bien hecho</h2>
+      <p>Elegí tu estilo. Si no estás seguro, te recomendamos lo que te queda mejor.</p>
+    </div>
+
+    <div class="grid cols-3" style="margin-top: 16px;">
+      {services.map((s) => (
+        <article class="card reveal" style="padding: 16px;">
+          <div style="display:flex; align-items:center; gap: 10px;">
+            <span aria-hidden="true" style="color: var(--accent); font-size: 18px;">✦</span>
+            <h3 style="margin:0; font-size: 16px;">{s.title}</h3>
+          </div>
+          <p style="margin-top: 8px;">{s.desc}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="card reveal" style="margin-top: 16px; padding: 16px;">
+      <strong>¿Querés reservar para la apertura?</strong>
+      <p style="margin:8px 0 0;">Escribinos por WhatsApp y te contamos disponibilidad.</p>
+    </div>
+  </div>
+</section>

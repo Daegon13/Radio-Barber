@@ -1,0 +1,32 @@
+---
+import { site, waLink } from "../config/site";
+const waHref = waLink(`Hola! Quiero consultar por reservas para la apertura de ${site.shortName}.`);
+---
+<section class="section">
+  <div class="container">
+    <div class="grid cols-2">
+      <div class="reveal">
+        <div class="kicker">Tu estilo</div>
+        <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Clásico de verdad. Moderno cuando toca.</h2>
+        <p>
+          Acá mandan la tijera y el peine: un enfoque clásico, de barbero de antes, con paciencia y mano fina.
+          Y si querés algo actual, también: degradés limpios, transiciones parejas y terminación cuidada.
+        </p>
+        <p>
+          La idea es una sola: que salgas con un corte que te quede bien y dure.
+        </p>
+        <a class="btn btn-primary" href={waHref} target="_blank" rel="noreferrer">Consultar por WhatsApp</a>
+      </div>
+
+      <div class="card reveal" style="padding: 18px;">
+        <div class="kicker" style="margin-bottom:10px;">Diferenciales</div>
+        <ul style="margin:0; padding-left: 18px; color: var(--muted);">
+          <li><strong style="color:var(--text)">Corte a tijera</strong> con forma y caída natural.</li>
+          <li><strong style="color:var(--text)">Degradés parejos</strong> sin saltos ni “escalones”.</li>
+          <li><strong style="color:var(--text)">Terminación prolija</strong> en contornos y detalles.</li>
+          <li><strong style="color:var(--text)">Atención con calma</strong> (ideal con cita).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

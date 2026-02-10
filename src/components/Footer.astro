@@ -1,0 +1,30 @@
+---
+import { site, mapsLink, waLink } from "../config/site";
+const mapHref = mapsLink();
+const waHref = waLink(`Hola! Quiero consultar por ${site.shortName}.`);
+---
+<footer style="padding: 34px 0 90px;">
+  <div class="container">
+    <div class="card reveal" style="padding: 18px;">
+      <div style="display:flex; flex-wrap:wrap; gap: 16px; align-items:flex-start; justify-content:space-between;">
+        <div>
+          <div class="kicker">Radio Barber</div>
+          <div style="font-weight: 900; font-size: 18px; margin-top: 6px;">{site.businessName}</div>
+          <p style="margin-top: 8px;">{site.addressLine} • {site.city}</p>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap: 10px; min-width: 240px;">
+          <a class="btn btn-primary" href={waHref} target="_blank" rel="noreferrer">Reservar por WhatsApp</a>
+          <a class="btn" href={mapHref} target="_blank" rel="noreferrer">Cómo llegar</a>
+          <div style="color: var(--muted); font-size: 13px;">
+            Redes (pronto): {site.instagramHandle} • {site.facebookHandle}
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; border-top:1px solid var(--line); padding-top: 14px; color: var(--muted); font-size: 12px;">
+        {site.openingNote} — Reservas pronto. Demo lista para vender (WhatsApp como canal principal).
+      </div>
+    </div>
+  </div>
+</footer>

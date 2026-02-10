@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+
+import Banner from "../components/Banner.astro";
+import Hero from "../components/Hero.astro";
+import TuEstilo from "../components/TuEstilo.astro";
+import Services from "../components/Services.astro";
+import Hours from "../components/Hours.astro";
+import Location from "../components/Location.astro";
+import Gallery from "../components/Gallery.astro";
+import Reviews from "../components/Reviews.astro";
+import FAQ from "../components/FAQ.astro";
+import Footer from "../components/Footer.astro";
+import StickyCTA from "../components/StickyCTA.astro";
+---
+<BaseLayout
+  title={site.businessName}
+  description="Barbería clásica en Mercedes. Corte a tijera con detalle y degradés modernos. Reservas por WhatsApp. Apertura en junio."
+>
+  <Banner text="Apertura en junio — cupos limitados para agenda. Consultá y reservá por WhatsApp." />
+  <Hero />
+  <TuEstilo />
+  <Services />
+  <Hours />
+  <Location />
+  <Gallery />
+  <Reviews />
+  <FAQ />
+  <Footer />
+  <StickyCTA />
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import { site } from "../config/site";
+const imgs = site.gallery;
+---
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">Galería</div>
+      <h2 style="font-size: clamp(26px, 3.5vw, 34px);">Fotos reales del estilo</h2>
+      <p>
+        Usá las fotos del anuncio (o del local). Reemplazá los archivos en <strong style="color:var(--text)">/public/images/gallery</strong> manteniendo los nombres <strong style="color:var(--text)">01–06</strong>.
+      </p>
+    </div>
+
+    <div class="grid cols-3" style="margin-top: 16px;">
+      {imgs.map((i) => (
+        <figure class="card reveal" style="overflow:hidden; margin:0;">
+          <img src={i.src} alt={i.alt} loading="lazy" decoding="async"
+               style="width:100%; height: 190px; object-fit: cover;" />
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
